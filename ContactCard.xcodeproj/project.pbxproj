@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6095B23E61DB28D464E83028 /* Pods_ContactCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F869EDA39CF039D5C87995A6 /* Pods_ContactCard.framework */; };
 		E89D60CF1BD4D0780060D179 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89D60CE1BD4D0780060D179 /* AppDelegate.swift */; };
-		E89D60D11BD4D0780060D179 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89D60D01BD4D0780060D179 /* ViewController.swift */; };
+		E89D60D11BD4D0780060D179 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89D60D01BD4D0780060D179 /* DetailViewController.swift */; };
 		E89D60D41BD4D0780060D179 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E89D60D21BD4D0780060D179 /* Main.storyboard */; };
 		E89D60D61BD4D0780060D179 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E89D60D51BD4D0780060D179 /* Assets.xcassets */; };
 		E89D60D91BD4D0780060D179 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E89D60D71BD4D0780060D179 /* LaunchScreen.storyboard */; };
 		E89D60E41BD4D0780060D179 /* ContactCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89D60E31BD4D0780060D179 /* ContactCardTests.swift */; };
 		E89D60EF1BD4D0780060D179 /* ContactCardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89D60EE1BD4D0780060D179 /* ContactCardUITests.swift */; };
+		E8E618FA1BD4E0310006E492 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E618F91BD4E0310006E492 /* Person.swift */; settings = {ASSET_TAGS = (); }; };
+		E8E618FC1BD4E32F0006E492 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E618FB1BD4E32F0006E492 /* TableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		E8E618FE1BD4F9E80006E492 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E618FD1BD4F9E80006E492 /* ApiManager.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		83EC755156603541ED45D1B9 /* Pods-ContactCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactCard.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContactCard/Pods-ContactCard.release.xcconfig"; sourceTree = "<group>"; };
+		89400ED334BA75277F7366F6 /* Pods-ContactCard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactCard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContactCard/Pods-ContactCard.debug.xcconfig"; sourceTree = "<group>"; };
 		E89D60CB1BD4D0780060D179 /* ContactCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E89D60CE1BD4D0780060D179 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E89D60D01BD4D0780060D179 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E89D60D01BD4D0780060D179 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E89D60D31BD4D0780060D179 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E89D60D51BD4D0780060D179 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E89D60D81BD4D0780060D179 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +53,10 @@
 		E89D60EA1BD4D0780060D179 /* ContactCardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactCardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E89D60EE1BD4D0780060D179 /* ContactCardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCardUITests.swift; sourceTree = "<group>"; };
 		E89D60F01BD4D0780060D179 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8E618F91BD4E0310006E492 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		E8E618FB1BD4E32F0006E492 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		E8E618FD1BD4F9E80006E492 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		F869EDA39CF039D5C87995A6 /* Pods_ContactCard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContactCard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6095B23E61DB28D464E83028 /* Pods_ContactCard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +85,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B8E95DA1546073FDADA1190D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F869EDA39CF039D5C87995A6 /* Pods_ContactCard.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2EAD80F6592525C22F8C674 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				89400ED334BA75277F7366F6 /* Pods-ContactCard.debug.xcconfig */,
+				83EC755156603541ED45D1B9 /* Pods-ContactCard.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E89D60C21BD4D0770060D179 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +109,8 @@
 				E89D60E21BD4D0780060D179 /* ContactCardTests */,
 				E89D60ED1BD4D0780060D179 /* ContactCardUITests */,
 				E89D60CC1BD4D0780060D179 /* Products */,
+				C2EAD80F6592525C22F8C674 /* Pods */,
+				B8E95DA1546073FDADA1190D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +128,14 @@
 			isa = PBXGroup;
 			children = (
 				E89D60CE1BD4D0780060D179 /* AppDelegate.swift */,
-				E89D60D01BD4D0780060D179 /* ViewController.swift */,
+				E89D60D01BD4D0780060D179 /* DetailViewController.swift */,
 				E89D60D21BD4D0780060D179 /* Main.storyboard */,
 				E89D60D51BD4D0780060D179 /* Assets.xcassets */,
 				E89D60D71BD4D0780060D179 /* LaunchScreen.storyboard */,
 				E89D60DA1BD4D0780060D179 /* Info.plist */,
+				E8E618F91BD4E0310006E492 /* Person.swift */,
+				E8E618FB1BD4E32F0006E492 /* TableViewController.swift */,
+				E8E618FD1BD4F9E80006E492 /* ApiManager.swift */,
 			);
 			path = ContactCard;
 			sourceTree = "<group>";
@@ -132,9 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E89D60F31BD4D0780060D179 /* Build configuration list for PBXNativeTarget "ContactCard" */;
 			buildPhases = (
+				7FE3A79EFE8F687FCC8AE692 /* Check Pods Manifest.lock */,
 				E89D60C71BD4D0770060D179 /* Sources */,
 				E89D60C81BD4D0770060D179 /* Frameworks */,
 				E89D60C91BD4D0770060D179 /* Resources */,
+				4ADF4DD1240E97282BDC624B /* Embed Pods Frameworks */,
+				C8B9C1948E209F5133676A2D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,13 +286,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4ADF4DD1240E97282BDC624B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContactCard/Pods-ContactCard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FE3A79EFE8F687FCC8AE692 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C8B9C1948E209F5133676A2D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContactCard/Pods-ContactCard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E89D60C71BD4D0770060D179 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E89D60D11BD4D0780060D179 /* ViewController.swift in Sources */,
+				E8E618FA1BD4E0310006E492 /* Person.swift in Sources */,
+				E89D60D11BD4D0780060D179 /* DetailViewController.swift in Sources */,
+				E8E618FE1BD4F9E80006E492 /* ApiManager.swift in Sources */,
 				E89D60CF1BD4D0780060D179 /* AppDelegate.swift in Sources */,
+				E8E618FC1BD4E32F0006E492 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +483,7 @@
 		};
 		E89D60F41BD4D0780060D179 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89400ED334BA75277F7366F6 /* Pods-ContactCard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ContactCard/Info.plist;
@@ -407,6 +495,7 @@
 		};
 		E89D60F51BD4D0780060D179 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83EC755156603541ED45D1B9 /* Pods-ContactCard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ContactCard/Info.plist;
@@ -483,6 +572,7 @@
 				E89D60F51BD4D0780060D179 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E89D60F61BD4D0780060D179 /* Build configuration list for PBXNativeTarget "ContactCardTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +581,7 @@
 				E89D60F81BD4D0780060D179 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E89D60F91BD4D0780060D179 /* Build configuration list for PBXNativeTarget "ContactCardUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +590,7 @@
 				E89D60FB1BD4D0780060D179 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

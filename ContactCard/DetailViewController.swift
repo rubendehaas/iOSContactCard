@@ -8,11 +8,24 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class DetailViewController: UIViewController {
+    @IBOutlet weak var imgFace: UIImageView!
+    @IBOutlet weak var firstnameLabel: UILabel!
+    @IBOutlet weak var lastnameLabel: UILabel!
+    var person: Person!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        if let image = imgFace{
+            image.image = person.photo
+        }
+        
+        imgFace.image = person.photo
+        firstnameLabel.text = person.firstname
+        lastnameLabel.text = person.lastname
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +33,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    
+    
 }
 
