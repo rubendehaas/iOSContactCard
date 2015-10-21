@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A82ACAFE83B0EEBDA1681CB6'
+               BlueprintIdentifier = '267D1233A544B587704446E1'
                BlueprintName = 'Pods-ContactCard'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_ContactCard.framework'>

@@ -7,24 +7,26 @@
 //
 
 import UIKit
+import CoreData
 
 class DetailViewController: UIViewController {
     @IBOutlet weak var imgFace: UIImageView!
     @IBOutlet weak var firstnameLabel: UILabel!
     @IBOutlet weak var lastnameLabel: UILabel!
     var person: Person!
+    var cdPerson = NSManagedObject!()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        if let image = imgFace{
-            image.image = person.photo
-        }
+        let url = NSURL(string: cdPerson.valueForKey("thumbnailURL") as! String)
+        let data = NSData(contentsOfURL: url!)
+        imgFace.image  = UIImage(data: data!)
         
-        imgFace.image = person.photo
-        firstnameLabel.text = person.firstname
-        lastnameLabel.text = person.lastname
+ 
+        firstnameLabel.text = cdPerson.valueForKey("firstname") as? String
+        lastnameLabel.text = cdPerson.valueForKey("lastname") as? String
         
     }
 

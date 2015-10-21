@@ -12,9 +12,9 @@ import UIKit
 class Person{
     var firstname: String
     var lastname: String
-    var photo: UIImage
+    var photo: String
     
-    init(firstname: String, photo: UIImage, lastname: String) {
+    init(firstname: String, photo: String, lastname: String) {
         self.firstname = firstname
         self.photo = photo
         self.lastname = lastname

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6095B23E61DB28D464E83028 /* Pods_ContactCard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F869EDA39CF039D5C87995A6 /* Pods_ContactCard.framework */; };
+		E8616EC51BD7AE5B0005F779 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E8616EC31BD7AE5B0005F779 /* CoreData.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
 		E89D60CF1BD4D0780060D179 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89D60CE1BD4D0780060D179 /* AppDelegate.swift */; };
 		E89D60D11BD4D0780060D179 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89D60D01BD4D0780060D179 /* DetailViewController.swift */; };
 		E89D60D41BD4D0780060D179 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E89D60D21BD4D0780060D179 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		83EC755156603541ED45D1B9 /* Pods-ContactCard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactCard.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContactCard/Pods-ContactCard.release.xcconfig"; sourceTree = "<group>"; };
 		89400ED334BA75277F7366F6 /* Pods-ContactCard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactCard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContactCard/Pods-ContactCard.debug.xcconfig"; sourceTree = "<group>"; };
+		E8616EC41BD7AE5B0005F779 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		E89D60CB1BD4D0780060D179 /* ContactCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E89D60CE1BD4D0780060D179 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E89D60D01BD4D0780060D179 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				E8E618F91BD4E0310006E492 /* Person.swift */,
 				E8E618FB1BD4E32F0006E492 /* TableViewController.swift */,
 				E8E618FD1BD4F9E80006E492 /* ApiManager.swift */,
+				E8616EC31BD7AE5B0005F779 /* CoreData.xcdatamodeld */,
 			);
 			path = ContactCard;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 			files = (
 				E8E618FA1BD4E0310006E492 /* Person.swift in Sources */,
 				E89D60D11BD4D0780060D179 /* DetailViewController.swift in Sources */,
+				E8616EC51BD7AE5B0005F779 /* CoreData.xcdatamodeld in Sources */,
 				E8E618FE1BD4F9E80006E492 /* ApiManager.swift in Sources */,
 				E89D60CF1BD4D0780060D179 /* AppDelegate.swift in Sources */,
 				E8E618FC1BD4E32F0006E492 /* TableViewController.swift in Sources */,
@@ -593,6 +597,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E8616EC31BD7AE5B0005F779 /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E8616EC41BD7AE5B0005F779 /* CoreData.xcdatamodel */,
+			);
+			currentVersion = E8616EC41BD7AE5B0005F779 /* CoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E89D60C31BD4D0770060D179 /* Project object */;
 }

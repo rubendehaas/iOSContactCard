@@ -7,30 +7,81 @@
 //
 
 import UIKit
-import SwiftJSON
+import SwiftyJSON
+import CoreData
 
 class TableViewController: UITableViewController {
     
-    var persons: [Person] = []
-
+    //var persons: [Person] = []
+    var cdPersons = [NSManagedObject]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        populateTableView()
-        
+        getPersons()
+    }
+    
+    @IBAction func AddBarBtnAction(sender: AnyObject) {
         let connection = ApiManager.sharedInstance
         connection.getUser(onCompletion)
-        
     }
+
     
     func onCompletion(json:NSDictionary?,error:NSError?){
         if(error==nil){
-            let bla = JSON(json)
+            let jsonstring = JSON(json!)
             
+            let jsonresult = jsonstring["results"]
             
-            print(bla)
+            for (_,subJson):(String, JSON) in jsonresult {
+                
+                let p1 = Person(firstname: subJson["user"]["name"]["first"].stringValue,
+                    photo: subJson["user"]["picture"]["thumbnail"].stringValue,
+                    lastname: subJson["user"]["name"]["last"].stringValue)
+                //persons.append(p1)
+                
+                addPerson(p1.firstname,lastname: p1.lastname,photoURL: p1.photo)
+            }
+            dispatch_async(dispatch_get_main_queue()) { () -> Void in
+                self.tableView.reloadData()
+            }
+            
         }else{
             print(error!.localizedDescription)
+        }
+    }
+    
+    func addPerson(firstname: String, lastname: String, photoURL: String){
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        let entity =  NSEntityDescription.entityForName("CDPerson", inManagedObjectContext:managedContext)
+        let person = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+        
+        person.setValue(firstname, forKey: "firstname")
+        person.setValue(lastname, forKey: "lastname")
+        person.setValue(photoURL, forKey: "thumbnailURL")
+        
+        do {
+            try managedContext.save()
+            cdPersons.append(person)
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        }
+    }
+    
+    func getPersons(){
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let managedContext = appDelegate.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName: "CDPerson")
+
+        do {
+            let results =
+            try managedContext.executeFetchRequest(fetchRequest)
+            cdPersons = results as! [NSManagedObject]
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
         }
     }
 
@@ -48,27 +99,20 @@ class TableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return persons.count
+        return cdPersons.count
     }
-    
-    func populateTableView(){
-        let p1 = Person(firstname: "Henk", photo: UIImage(named: "hoofd")!, lastname: "Muts")
-        let p2 = Person(firstname: "Peter", photo: UIImage(named: "hoofd")!, lastname: "Muts")
-        let p3 = Person(firstname: "Frans", photo: UIImage(named: "hoofd")!, lastname: "Muts")
-        persons.append(p1)
-        persons.append(p2)
-        persons.append(p3)
-    }
-
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("personCell", forIndexPath: indexPath)
-
+        
         // Configure the cell...
         let row = indexPath.row
-        cell.textLabel?.text = persons[row].firstname
-        cell.detailTextLabel?.text = persons[row].firstname
-        cell.imageView?.image = persons[row].photo
+        cell.textLabel?.text = cdPersons[row].valueForKey("firstname") as? String
+        cell.detailTextLabel?.text = cdPersons[row].valueForKey("lastname") as? String
+        
+        let url = NSURL(string: cdPersons[row].valueForKey("thumbnailURL") as! String)
+        let data = NSData(contentsOfURL: url!)
+        cell.imageView!.image  = UIImage(data: data!)
 
         return cell
     }
@@ -119,8 +163,8 @@ class TableViewController: UITableViewController {
         if segue.identifier == "personDetail"{
             if let destination = segue.destinationViewController as? DetailViewController{
                 if let indexPath = self.tableView.indexPathForSelectedRow{
-                    let person = persons[indexPath.row]
-                    destination.person = person
+                    let person = cdPersons[indexPath.row]
+                    destination.cdPerson = person
                 }
             }
         }

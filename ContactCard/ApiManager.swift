@@ -15,7 +15,7 @@ class ApiManager: NSObject{
     var apiUrl: String?
     
     override init() {
-        apiUrl = "https://randomuser.me/api/?results=10"
+        apiUrl = "https://randomuser.me/api/"
     }
     
     func getUser(onCompletion: (NSDictionary?,NSError?)-> Void){
@@ -34,6 +34,7 @@ class ApiManager: NSObject{
             do{
                 let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary
                 onCompletion(json,nil)
+                
             }catch{
                 onCompletion(nil,error as NSError)
             }
